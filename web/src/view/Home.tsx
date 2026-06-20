@@ -1,7 +1,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
-import { Button } from '@heroui/react';
+import { Button, Card, Label, Switch } from '@heroui/react';
 import { QWebChannel } from 'qwebchannel';
 export default function () {
 
@@ -15,6 +15,17 @@ export default function () {
     }
 
     return <div>
-        <Button onClick={test}>测试</Button>
+        <Card className='w-1/3'>
+            <Switch>
+                <Switch.Content>
+                    <Switch.Control>
+                        <Switch.Thumb />
+                    </Switch.Control>
+                    Enable notifications
+                </Switch.Content>
+            </Switch>
+            <Label>hello world</Label>
+            <Button size="sm" onClick={test}>测试</Button>
+        </Card>
     </div>
 }

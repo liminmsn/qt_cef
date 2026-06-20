@@ -1,26 +1,8 @@
 @import "tailwindcss";
 @import "@heroui/styles";
+@import "./themes/ocean.css";
+@import "./themes/tokyo-night.css";
 
-/* :root {
-  
-} */
-@layer theme {
-
-    [data-theme="purple"] {
-        --accent: oklch(0.62 0.25 300);
-        --background: oklch(0.98 0.01 300);
-        --foreground: oklch(0.20 0.02 300);
-    }
-
-    [data-theme="green"] {
-        --accent: oklch(0.72 0.20 145);
-        --background: oklch(0.98 0.01 145);
-        --foreground: oklch(0.20 0.02 145);
-    }
-
-    [data-theme="pink"] {
-        --accent: oklch(0.72 0.22 350);
-        --background: oklch(0.98 0.01 350);
-        --foreground: oklch(0.20 0.02 350);
-    }
+:root {
+    --radius: 0.45svh !important;
 }
