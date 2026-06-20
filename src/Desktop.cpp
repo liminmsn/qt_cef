@@ -17,7 +17,7 @@ Desktop::Desktop(QWidget *parent) : QMainWindow(parent)
     // 远程调试
     qputenv("QTWEBENGINE_REMOTE_DEBUGGING", QByteArray("9222"));
 
-    setFixedSize(300, 600);
+    setFixedSize(800, 600);
 
     auto *widget = new QWidget(this);
     auto *vbox = new QVBoxLayout(widget);
