@@ -1,15 +1,27 @@
 #include "Desktop.h"
 #include "Bridge.h"
+#include <QApplication>
 #include <QCloseEvent>
 #include <QVBoxLayout>
 #include <QWebEngineSettings>
 #include <QWebEngineView>
 #include <QWebChannel>
 
-void Desktop::closeEvent(QCloseEvent *event)
+#include <QCloseEvent>
+
+void Desktop::showWindow()
 {
-    event->ignore();
-    hide();
+    showNormal();
+
+    setWindowState(
+        windowState() & ~Qt::WindowMinimized);
+
+    raise();
+    activateWindow();
+
+#ifdef Q_OS_MAC
+    QApplication::alert(this);
+#endif
 }
 
 Desktop::Desktop(QWidget *parent) : QMainWindow(parent)
