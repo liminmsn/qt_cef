@@ -2,7 +2,6 @@ import { Button, Card, Switch, Tabs } from '@heroui/react';
 import Editor from "@monaco-editor/react";
 import { Canvas } from "@react-three/fiber";
 import { QWebChannel } from 'qwebchannel';
-import * as THREE from 'three';
 export default function () {
 
     function test() {
@@ -80,8 +79,4 @@ void main()
             resr
         </Tabs.Panel>
     </Tabs>
-}
-
-function useMemo(arg0: () => any, arg1: never[]) {
-    throw new Error('Function not implemented.');
 }
