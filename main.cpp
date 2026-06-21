@@ -6,7 +6,7 @@ int main(int argc, char **argv)
 {
     std::cout << "Hello, from cef!\n";
     QApplication app(argc, argv);
-    // app.setApplicationName("壁纸汇2");
+    // app.setApplicationName("");
     // app.setStyle("Fusion");
     // app.setFont(QFont("PingFang SC", 13));
     // app.setWindowIcon(QIcon(":/assets/logo.png"));
