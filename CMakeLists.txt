@@ -34,4 +34,27 @@ target_include_directories(cef PRIVATE
     "${CMAKE_SOURCE_DIR}/src"
 )
 
-set_target_properties(cef PROPERTIES OUTPUT_NAME "壁纸汇2")
+
+set_target_properties(cef PROPERTIES OUTPUT_NAME "Shader")
+
+
+if(APPLE)
+
+    set(APP_ICON
+        ${CMAKE_SOURCE_DIR}/assets/icon.icns
+    )
+
+    set_source_files_properties(
+        ${APP_ICON}
+        PROPERTIES
+        MACOSX_PACKAGE_LOCATION "Resources"
+    )
+
+    target_sources(cef PRIVATE ${APP_ICON})
+
+    set_target_properties(cef PROPERTIES
+        MACOSX_BUNDLE TRUE
+        MACOSX_BUNDLE_ICON_FILE icon.icns
+    )
+
+endif()
