@@ -2,6 +2,7 @@
 @import "@heroui/styles";
 @import "./themes/ocean.css";
 @import "./themes/tokyo-night.css";
+@import "./themes/vscode.css";
 
 :root {
     --radius: 0.45svh !important;

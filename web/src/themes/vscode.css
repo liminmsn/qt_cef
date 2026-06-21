@@ -1,0 +1,177 @@
+/* src/themes/vscode.css */
+
+@layer base {
+
+    /* =========================
+     VSCode Light+
+     ========================= */
+    [data-theme="vscode"] {
+        color-scheme: light;
+
+        /* Primitive */
+        --white: oklch(100% 0 0);
+        --black: oklch(0% 0 0);
+
+        /* Layout */
+        --spacing: 0.25rem;
+        --border-width: 1px;
+        --field-border-width: 0px;
+        --disabled-opacity: 0.5;
+        --ring-offset-width: 2px;
+
+        /* Radius */
+        --radius: 0.5rem;
+        --field-radius: 0.5rem;
+
+        /* Base */
+        --background: oklch(98% 0.003 260);
+        --foreground: oklch(24% 0.01 260);
+
+        /* Surface */
+        --surface: var(--white);
+        --surface-foreground: var(--foreground);
+
+        /* Overlay */
+        --overlay: var(--white);
+        --overlay-foreground: var(--foreground);
+
+        --muted: oklch(58% 0.01 260);
+
+        /* Scrollbar */
+        --scrollbar-thumb: oklch(75% 0.003 260);
+        --scrollbar-track: transparent;
+        --scrollbar-gutter: auto;
+        --scrollbar-width: thin;
+        --scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+        --scrollbar: var(--scrollbar-thumb);
+
+        /* Default */
+        --default: oklch(95% 0.003 260);
+        --default-foreground: var(--foreground);
+
+        /* VSCode Blue */
+        --accent: oklch(57% 0.18 255);
+        --accent-foreground: var(--white);
+
+        /* Form */
+        --field-background: var(--white);
+        --field-foreground: var(--foreground);
+        --field-placeholder: var(--muted);
+        --field-border: transparent;
+
+        /* Status */
+        --success: oklch(72% 0.18 145);
+        --success-foreground: var(--black);
+
+        --warning: oklch(82% 0.14 80);
+        --warning-foreground: var(--black);
+
+        --danger: oklch(64% 0.24 25);
+        --danger-foreground: var(--white);
+
+        /* Component */
+        --segment: var(--white);
+        --segment-foreground: var(--foreground);
+
+        /* Misc */
+        --border: oklch(88% 0.004 260);
+        --separator: oklch(92% 0.003 260);
+        --focus: var(--accent);
+        --link: var(--accent);
+
+        /* Shadow */
+        --surface-shadow:
+            0 1px 2px rgb(0 0 0 / 8%),
+            0 2px 6px rgb(0 0 0 / 4%);
+
+        --overlay-shadow:
+            0 6px 20px rgb(0 0 0 / 12%);
+
+        --field-shadow:
+            0 1px 2px rgb(0 0 0 / 6%);
+
+        --skeleton-animation: shimmer;
+        --tooltip-delay: 1500ms;
+        --tooltip-close-delay: 500ms;
+
+        /* VSCode Specific */
+        --titlebar: #ffffff;
+        --sidebar: #f3f3f3;
+        --activitybar: #e7e7e7;
+        --editor: #ffffff;
+        --statusbar: #007acc;
+        --tab-active: #ffffff;
+        --tab-inactive: #ececec;
+    }
+
+    /* =========================
+     VSCode Dark+
+     ========================= */
+    [data-theme="vscode-dark"] {
+        color-scheme: dark;
+
+        /* VSCode Dark+ */
+
+        --background: #ff5151;
+        /* editor.background */
+        --foreground: #d4d4d4;
+        /* editor.foreground */
+
+        --surface: #252526;
+        /* sideBar.background */
+        --surface-foreground: #cccccc;
+
+        --overlay: #2d2d30;
+        /* menu / dropdown */
+        --overlay-foreground: #cccccc;
+
+        --default: #2d2d30;
+        --default-foreground: #cccccc;
+
+        --accent: #0078d4;
+        /* focus border / button */
+        --accent-foreground: #ffffff;
+
+        --field-background: #3c3c3c;
+        --field-foreground: #cccccc;
+        --field-placeholder: #808080;
+
+        --segment: #37373d;
+        --segment-foreground: #cccccc;
+
+        --border: #3c3c3c;
+        --separator: #3c3c3c;
+
+        --muted: #858585;
+
+        --success: #89d185;
+        --warning: #cca700;
+        --danger: #f14c4c;
+
+        --focus: #0078d4;
+        --link: #3794ff;
+
+        --scrollbar-thumb: #424242;
+        --scrollbar-track: transparent;
+
+        --surface-shadow: none;
+        --overlay-shadow: none;
+        --field-shadow: none;
+
+        /* VSCode Layout */
+
+        --titlebar: #2d2d30;
+        --activitybar: #333333;
+        --sidebar: #252526;
+        --editor: #1e1e1e;
+        --panel: #1e1e1e;
+        --statusbar: #007acc;
+
+        --tab-active: #1e1e1e;
+        --tab-inactive: #2d2d2d;
+        --tab-hover: #323233;
+
+        --selection: #264f78;
+        --hover: #2a2d2e;
+    }
+}
