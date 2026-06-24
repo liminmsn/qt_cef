@@ -1,0 +1,45 @@
+#!/bin/bash
+
+cd "$(dirname "$0")"
+
+set -e
+
+# 检查文件
+if [ ! -f "logo.png" ]; then
+    echo "logo.png 不存在"
+    exit 1
+fi
+
+# 转成标准 1024x1024
+sips -z 1024 1024 logo.png --out icon.png
+
+# 清理旧文件
+rm -rf icon.iconset icon.icns
+
+mkdir icon.iconset
+
+# 生成所有尺寸
+sips -z 16 16 icon.png --out icon.iconset/icon_16x16.png
+sips -z 32 32 icon.png --out icon.iconset/icon_16x16@2x.png
+
+sips -z 32 32 icon.png --out icon.iconset/icon_32x32.png
+sips -z 64 64 icon.png --out icon.iconset/icon_32x32@2x.png
+
+sips -z 128 128 icon.png --out icon.iconset/icon_128x128.png
+sips -z 256 256 icon.png --out icon.iconset/icon_128x128@2x.png
+
+sips -z 256 256 icon.png --out icon.iconset/icon_256x256.png
+sips -z 512 512 icon.png --out icon.iconset/icon_256x256@2x.png
+
+sips -z 512 512 icon.png --out icon.iconset/icon_512x512.png
+cp icon.png icon.iconset/icon_512x512@2x.png
+
+# 生成 icns
+iconutil -c icns icon.iconset
+
+# 验证
+file icon.icns
+
+echo ""
+echo "生成成功:"
+echo "$(pwd)/icon.icns"
