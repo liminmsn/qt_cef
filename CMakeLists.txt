@@ -9,7 +9,7 @@ set(CMAKE_AUTOUIC ON)
 file(GLOB_RECURSE SRC_FILES
     CONFIGURE_DEPENDS
     "${CMAKE_SOURCE_DIR}/src/*.cpp"
-    "${CMAKE_SOURCE_DIR}/src/*.h"
+    "${CMAKE_SOURCE_DIR}/src/head/*.h"
 )
 
 if(WIN32)

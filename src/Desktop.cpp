@@ -1,10 +1,10 @@
-#include "Desktop.h"
-#include "Bridge.h"
 #include <QCloseEvent>
 #include <QVBoxLayout>
 #include <QWebEngineSettings>
 #include <QWebEngineView>
 #include <QWebChannel>
+#include "head/Desktop.h"
+#include "head/Bridge.h"
 
 void Desktop::closeEvent(QCloseEvent *event)
 {
